@@ -1,1034 +1,471 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Para Mi Angy ❤️</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
+*{ margin:0; padding:0; box-sizing:border-box; }
 body{
-
-background:
-radial-gradient(circle at top,#9b2542 0%,#7a1230 30%,#4a0e1f 70%,#22060d 100%);
-
-font-family:'Cormorant Garamond',serif;
-color:white;
-overflow-x:hidden;
-min-height:100vh;
+  background: radial-gradient(circle at top,#9b2542 0%,#7a1230 30%,#4a0e1f 70%,#22060d 100%);
+  font-family:'Cormorant Garamond',serif; color:white; overflow-x:hidden; min-height:100vh;
 }
-
 #bienvenida{
-  position:fixed;
-  inset:0;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  gap:30px;
+  position:fixed; inset:0; display:flex; flex-direction:column; justify-content:center;
+  align-items:center; gap:30px;
   background: radial-gradient(ellipse at center, #6b0f27 0%, #3d0616 50%, #1a0209 100%);
-  z-index:9999;
-  transition: opacity 1.2s ease;
+  z-index:9999; transition: opacity 1.2s ease;
 }
-
 #bienvenida-texto{
-  font-family:'Great Vibes',cursive;
-  font-size:38px;
-  color:#ffdca8;
-  text-shadow: 0 0 20px rgba(255,180,100,0.5);
-  text-align:center;
-  animation: fadeInDown 1.2s ease forwards;
-  opacity:0;
+  font-family:'Great Vibes',cursive; font-size:38px; color:#ffdca8;
+  text-shadow: 0 0 20px rgba(255,180,100,0.5); text-align:center;
+  animation: fadeInDown 1.2s ease forwards; opacity:0;
 }
-
-@keyframes fadeInDown{
-  from{ opacity:0; transform:translateY(-20px); }
-  to{ opacity:1; transform:translateY(0); }
-}
-
+@keyframes fadeInDown{ from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:translateY(0)} }
 #bienvenida-sub{
-  font-size:18px;
-  color:rgba(255,220,168,0.7);
-  letter-spacing:2px;
-  text-transform:uppercase;
-  animation: fadeInDown 1.2s ease 0.4s forwards;
-  opacity:0;
+  font-size:18px; color:rgba(255,220,168,0.7); letter-spacing:2px; text-transform:uppercase;
+  animation: fadeInDown 1.2s ease 0.4s forwards; opacity:0;
 }
-
 .sobre-wrapper{
   animation: latido 2.2s ease-in-out infinite, fadeInUp 1s ease 0.3s forwards;
-  opacity:0;
-  cursor:pointer;
-  filter: drop-shadow(0 10px 40px rgba(180,30,70,0.5));
+  opacity:0; cursor:pointer; filter: drop-shadow(0 10px 40px rgba(180,30,70,0.5));
 }
-
-@keyframes latido{
-  0%,100%{ transform: scale(1); }
-  50%{ transform: scale(1.04); }
-}
-
-@keyframes fadeInUp{
-  from{ opacity:0; transform:translateY(30px); }
-  to{ opacity:1; transform:translateY(0); }
-}
-
-.sobre-svg{
-  width:340px;
-  height:auto;
-}
-
-.sobre-tapa-svg{
-  transition: transform 1s ease, opacity 0.8s ease;
-  transform-origin: top center;
-  transform-box: fill-box;
-}
-
+@keyframes latido{ 0%,100%{transform:scale(1)} 50%{transform:scale(1.04)} }
+@keyframes fadeInUp{ from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+.sobre-svg{ width:340px; height:auto; }
 .toque-hint{
-  font-size:16px;
-  color:rgba(255,200,150,0.65);
-  letter-spacing:3px;
-  text-transform:uppercase;
-  text-align:center;
-  animation: parpadeo 2s ease-in-out infinite;
+  font-size:16px; color:rgba(255,200,150,0.65); letter-spacing:3px;
+  text-transform:uppercase; text-align:center; animation: parpadeo 2s ease-in-out infinite;
 }
-
-@keyframes parpadeo{
-  0%,100%{ opacity:0.5; }
-  50%{ opacity:1; }
-}
-
-.container{
-
-width:min(1000px,95%);
-margin:auto;
-padding:40px 20px;
-
-display:none;
-}
-
+@keyframes parpadeo{ 0%,100%{opacity:0.5} 50%{opacity:1} }
+.container{ width:min(1000px,95%); margin:auto; padding:40px 20px; display:none; }
 .hero{
-
-background:rgba(255,255,255,.05);
-
-backdrop-filter:blur(15px);
-
-padding:40px;
-border-radius:30px;
-
-border:1px solid rgba(255,255,255,.15);
-
-box-shadow:
-0 0 40px rgba(0,0,0,.4);
+  background:rgba(255,255,255,.05); backdrop-filter:blur(15px); padding:40px; border-radius:30px;
+  border:1px solid rgba(255,255,255,.15); box-shadow:0 0 40px rgba(0,0,0,.4);
 }
-
-.titulo{
-
-font-family:'Great Vibes',cursive;
-
-font-size:90px;
-
-text-align:center;
-
-color:#ffdca8;
-
-margin-bottom:20px;
-
-text-shadow:
-0 0 20px rgba(255,220,168,.5);
+.titulo{ font-family:'Great Vibes',cursive; font-size:90px; text-align:center; color:#ffdca8; margin-bottom:20px; text-shadow:0 0 20px rgba(255,220,168,.5); }
+.subtitulo{ text-align:center; font-size:28px; margin-bottom:40px; }
+.foto-marco{ width:350px; height:450px; margin:auto; padding:12px; background:linear-gradient(135deg,#f5d18d,#d4a24c,#fff1c9); border-radius:20px; box-shadow:0 0 35px rgba(212,162,76,.4); margin-bottom:40px; }
+.foto-marco img{ width:100%; height:100%; object-fit:cover; border-radius:12px; }
+.video-marco{ width:min(700px,95%); margin:40px auto; padding:12px; background:linear-gradient(135deg,#f5d18d,#d4a24c,#fff1c9); border-radius:20px; box-shadow:0 0 35px rgba(212,162,76,.4); }
+.video-marco video{ width:100%; border-radius:12px; display:block; }
+.video-titulo{ font-family:'Great Vibes',cursive; font-size:55px; text-align:center; color:#ffdca8; margin:40px 0 15px; text-shadow: 0 0 20px rgba(255,220,168,.4); }
+.carta{ font-size:30px; line-height:1.8; text-align:justify; padding:20px; }
+.carta p{ margin-bottom:25px; }
+.destacado{ color:#ffdca8; font-weight:bold; }
+#corazon-section{ margin-top:80px; text-align:center; padding:0 10px; }
+#corazonTitulo{ font-family:'Great Vibes',cursive; font-size:70px; color:#ffdca8; margin-bottom:15px; }
+#corazonTexto{ font-size:28px; margin-bottom:20px; }
+#canvasWrapper{
+  display:inline-block; position:relative;
+  width:min(480px,92vw); height:min(480px,92vw); margin:0 auto;
 }
-
-.subtitulo{
-
-text-align:center;
-
-font-size:28px;
-
-margin-bottom:40px;
-}
-
-.foto-marco{
-
-width:350px;
-height:450px;
-
-margin:auto;
-
-padding:12px;
-
-background:
-linear-gradient(
-135deg,
-#f5d18d,
-#d4a24c,
-#fff1c9
-);
-
-border-radius:20px;
-
-box-shadow:
-0 0 35px rgba(212,162,76,.4);
-
-margin-bottom:40px;
-}
-
-.foto-marco img{
-
-width:100%;
-height:100%;
-
-object-fit:cover;
-
-border-radius:12px;
-}
-
-.video-marco{
-
-width:min(700px,95%);
-margin:40px auto;
-
-padding:12px;
-
-background:
-linear-gradient(
-135deg,
-#f5d18d,
-#d4a24c,
-#fff1c9
-);
-
-border-radius:20px;
-
-box-shadow:
-0 0 35px rgba(212,162,76,.4);
-}
-
-.video-marco video{
-
-width:100%;
-
-border-radius:12px;
-
-display:block;
-}
-
-.video-titulo{
-
-font-family:'Great Vibes',cursive;
-font-size:55px;
-text-align:center;
-color:#ffdca8;
-margin:40px 0 15px;
-text-shadow: 0 0 20px rgba(255,220,168,.4);
-}
-
-.carta{
-
-font-size:30px;
-line-height:1.8;
-
-text-align:justify;
-
-padding:20px;
-}
-
-.carta p{
-
-margin-bottom:25px;
-}
-
-.destacado{
-
-color:#ffdca8;
-font-weight:bold;
-}
-
-#corazon-section{
-
-margin-top:80px;
-text-align:center;
-}
-
-#corazonTitulo{
-
-font-family:'Great Vibes',cursive;
-font-size:70px;
-color:#ffdca8;
-margin-bottom:15px;
-}
-
-#corazonTexto{
-
-font-size:28px;
-margin-bottom:20px;
-}
-
-#progreso{
-
-font-size:26px;
-margin-bottom:20px;
-color:#ffdca8;
-}
-
 #heartCanvas{
-
-width:min(480px, 92vw);
-height:min(480px, 92vw);
-
-background:rgba(255,255,255,.04);
-
-border-radius:25px;
-
-border:1px solid rgba(255,255,255,.1);
-
-cursor:crosshair;
-
-touch-action:none;
+  width:100%; height:100%; background:rgba(255,255,255,.04);
+  border-radius:25px; border:1px solid rgba(255,255,255,.1);
+  cursor:crosshair; touch-action:none; display:block;
 }
 
-#corazon-section{
-  padding: 0 10px;
+/* Barra de progreso */
+#progresoWrap{
+  width:min(480px,92vw); margin:18px auto 0; 
+  background:rgba(255,255,255,0.08); border-radius:50px; overflow:hidden;
+  border:1px solid rgba(255,220,168,0.2); height:18px;
+}
+#progresoBar{
+  height:100%; width:0%; background:linear-gradient(90deg,#ff4d80,#ff8fab);
+  border-radius:50px; transition:width 0.4s ease;
+  box-shadow:0 0 10px rgba(255,100,150,0.5);
+}
+#progresoTexto{
+  font-size:20px; color:rgba(255,220,168,0.8); margin-top:8px; letter-spacing:1px;
 }
 
-#mensajeMotivador{
-
-margin-top:20px;
-font-size:26px;
-color:#ffe8bd;
-height:40px;
+#mensajeMotivador{ margin-top:16px; font-size:26px; color:#ffe8bd; min-height:36px; }
+.btn-grupo{ display:flex; gap:15px; justify-content:center; flex-wrap:wrap; margin-top:22px; }
+#btnReiniciar{
+  padding:14px 40px; font-family:'Cormorant Garamond',serif; font-size:22px; color:#ffdca8;
+  background:rgba(255,255,255,0.08); border:1px solid rgba(255,220,168,0.4);
+  border-radius:50px; cursor:pointer; letter-spacing:2px; transition:background 0.3s,transform 0.2s;
 }
+#btnReiniciar:hover{ background:rgba(255,100,130,0.2); transform:scale(1.05); }
+
+/* Botón listo — bloqueado por defecto */
+#btnCompletar{
+  padding:14px 40px; font-family:'Cormorant Garamond',serif; font-size:22px;
+  border-radius:50px; letter-spacing:2px; transition:all 0.4s ease;
+  /* Estado bloqueado */
+  color:rgba(255,220,168,0.3);
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,220,168,0.15);
+  cursor:not-allowed;
+  pointer-events:none;
+}
+#btnCompletar.desbloqueado{
+  color:#ffdca8;
+  background:rgba(255,60,100,0.25);
+  border:1px solid rgba(255,150,170,0.7);
+  cursor:pointer;
+  pointer-events:auto;
+  animation: parpadeo 1.8s ease-in-out infinite, brilloBorde 1.8s ease-in-out infinite;
+  box-shadow:0 0 20px rgba(255,80,120,0.4);
+}
+@keyframes brilloBorde{
+  0%,100%{ box-shadow:0 0 15px rgba(255,80,120,0.3); }
+  50%{ box-shadow:0 0 35px rgba(255,80,120,0.8); }
+}
+#btnCompletar.desbloqueado:hover{ background:rgba(255,60,100,0.45); transform:scale(1.06); }
 
 #finalOverlay{
-
-position:fixed;
-inset:0;
-
-display:none;
-
-justify-content:center;
-align-items:center;
-flex-direction:column;
-
-background:rgba(0,0,0,.75);
-
-backdrop-filter:blur(10px);
-
-z-index:99999;
+  position:fixed; inset:0; display:none; justify-content:center; align-items:center;
+  flex-direction:column; background:rgba(0,0,0,.75); backdrop-filter:blur(10px); z-index:99999;
 }
-
 #finalOverlay h1{
-
-font-family:'Great Vibes',cursive;
-
-font-size:140px;
-
-color:#ffdca8;
-
-text-shadow:
-0 0 40px #ff7ca5,
-0 0 80px #ff7ca5;
-
-animation:pulse 2s infinite;
+  font-family:'Great Vibes',cursive; font-size:140px; color:#ffdca8;
+  text-shadow:0 0 40px #ff7ca5,0 0 80px #ff7ca5; animation:pulse 2s infinite;
 }
+#finalOverlay p{ font-size:40px; margin-top:20px; }
+@keyframes pulse{ 0%{transform:scale(1)} 50%{transform:scale(1.1)} 100%{transform:scale(1)} }
+#cartaSecreta{ display:none; margin-top:60px; padding:40px; background:rgba(255,255,255,.05); border-radius:25px; font-size:30px; line-height:1.8; }
+.heart-particle{ position:fixed; pointer-events:none; z-index:999999; }
+audio{ display:none; }
 
-#finalOverlay p{
-
-font-size:40px;
-margin-top:20px;
+@media(max-width:600px){
+  .titulo{font-size:58px} .subtitulo{font-size:20px} .carta{font-size:22px}
+  #corazonTitulo{font-size:48px} #corazonTexto{font-size:18px}
+  #mensajeMotivador{font-size:18px} .foto-marco{width:90vw;height:auto;aspect-ratio:3/4}
+  .video-titulo{font-size:38px} .hero{padding:25px 15px}
+  #btnReiniciar,#btnCompletar{font-size:18px;padding:12px 30px}
+  #finalOverlay h1{font-size:80px}
 }
-
-@keyframes pulse{
-
-0%{transform:scale(1);}
-50%{transform:scale(1.1);}
-100%{transform:scale(1);}
-}
-
-#cartaSecreta{
-
-display:none;
-
-margin-top:60px;
-
-padding:40px;
-
-background:rgba(255,255,255,.05);
-
-border-radius:25px;
-
-font-size:30px;
-line-height:1.8;
-}
-
-.heart-particle{
-
-position:fixed;
-pointer-events:none;
-z-index:999999;
-}
-
-audio{
-display:none;
-}
-@media(max-width: 600px){
-  .titulo{ font-size: 58px; }
-  .subtitulo{ font-size: 20px; }
-  .carta{ font-size: 22px; }
-  #corazonTitulo{ font-size: 48px; }
-  #corazonTexto{ font-size: 18px; }
-  #mensajeMotivador{ font-size: 18px; }
-  .foto-marco{ width: 90vw; height: auto; aspect-ratio: 3/4; }
-  .video-titulo{ font-size: 38px; }
-  .hero{ padding: 25px 15px; }
-  #btnReiniciar{ font-size: 18px; padding: 12px 30px; }
-}
-
-
-#btnReiniciar{
-  margin-top:25px;
-  padding:14px 40px;
-  font-family:'Cormorant Garamond',serif;
-  font-size:22px;
-  color:#ffdca8;
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,220,168,0.4);
-  border-radius:50px;
-  cursor:pointer;
-  letter-spacing:2px;
-  transition: background 0.3s, transform 0.2s;
-}
-#btnReiniciar:hover{
-  background:rgba(255,100,130,0.2);
-  transform:scale(1.05);
-}
-
-
-
 </style>
 </head>
-
 <body>
 
 <div id="bienvenida">
-
   <div id="bienvenida-texto">Para mi Angy ❤️</div>
   <div id="bienvenida-sub">Una carta con todo mi amor</div>
-
   <div class="sobre-wrapper" id="abrirCarta">
     <svg class="sobre-svg" viewBox="0 0 340 240" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="sobreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#f5e6d0"/>
-          <stop offset="100%" style="stop-color:#e8d0b8"/>
+          <stop offset="0%" style="stop-color:#f5e6d0"/><stop offset="100%" style="stop-color:#e8d0b8"/>
         </linearGradient>
         <linearGradient id="tapaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#eddfc8"/>
-          <stop offset="100%" style="stop-color:#dfc9a8"/>
+          <stop offset="0%" style="stop-color:#eddfc8"/><stop offset="100%" style="stop-color:#dfc9a8"/>
         </linearGradient>
         <linearGradient id="lacreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#c41848"/>
-          <stop offset="100%" style="stop-color:#7a0e28"/>
+          <stop offset="0%" style="stop-color:#c41848"/><stop offset="100%" style="stop-color:#7a0e28"/>
         </linearGradient>
-        <filter id="sombra">
-          <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="rgba(0,0,0,0.25)"/>
-        </filter>
-        <filter id="lacreSombra">
-          <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(180,0,60,0.5)"/>
-        </filter>
+        <filter id="sombra"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="rgba(0,0,0,0.25)"/></filter>
+        <filter id="lacreSombra"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(180,0,60,0.5)"/></filter>
       </defs>
-
-      <!-- Cuerpo del sobre -->
-      <rect x="10" y="60" width="320" height="170" rx="12" ry="12"
-            fill="url(#sobreGrad)" filter="url(#sombra)"/>
-
-      <!-- Pliegues laterales del sobre (V-shaped sides) -->
+      <rect x="10" y="60" width="320" height="170" rx="12" ry="12" fill="url(#sobreGrad)" filter="url(#sombra)"/>
       <polygon points="10,60 170,160 10,230" fill="#dfc5a2" opacity="0.6"/>
       <polygon points="330,60 170,160 330,230" fill="#d4ba96" opacity="0.6"/>
-
-      <!-- Pliegue inferior -->
       <polygon points="10,230 170,160 330,230" fill="#e2cdb0" opacity="0.8"/>
-
-      <!-- Tapa del sobre (triángulo hacia arriba) -->
-      <polygon id="tapaSVG" points="10,60 330,60 170,155"
-               fill="url(#tapaGrad)" filter="url(#sombra)"
-               style="transition: transform 1s ease; transform-origin: 170px 60px; transform-box: fill-box;"/>
-
-      <!-- Borde elegante del sobre -->
-      <rect x="10" y="60" width="320" height="170" rx="12" ry="12"
-            fill="none" stroke="#c8a87a" stroke-width="1.5" opacity="0.6"/>
-
-      <!-- Lacre circular -->
+      <polygon id="tapaSVG" points="10,60 330,60 170,155" fill="url(#tapaGrad)" filter="url(#sombra)"
+        style="transition:transform 1s ease;transform-origin:170px 60px;transform-box:fill-box;"/>
+      <rect x="10" y="60" width="320" height="170" rx="12" ry="12" fill="none" stroke="#c8a87a" stroke-width="1.5" opacity="0.6"/>
       <circle cx="170" cy="155" r="28" fill="url(#lacreGrad)" filter="url(#lacreSombra)"/>
       <circle cx="170" cy="155" r="24" fill="none" stroke="#e8608a" stroke-width="1" opacity="0.5"/>
-
-      <!-- Corazón en el lacre -->
       <text x="170" y="163" text-anchor="middle" font-size="22" fill="white" opacity="0.95">❤️</text>
     </svg>
   </div>
-
   <div class="toque-hint">Toca para abrir ✦</div>
-
 </div>
 
-<audio id="musica" loop>
-<source src="cancion.mp3" type="audio/mpeg">
-</audio>
+<audio id="musica" loop><source src="cancion.mp3" type="audio/mpeg"></audio>
 
 <div class="container" id="contenido">
-
 <div class="hero">
+  <h1 class="titulo">Para Angy ❤️</h1>
+  <p class="subtitulo">Mi princesita linda, mi corazoncito, mis ojitos radiantes...</p>
+  <div class="foto-marco"><img src="AF.jpg" alt="Nuestra Foto"></div>
 
-<h1 class="titulo">Para Angy ❤️</h1>
+  <div class="carta">
+    <p>Mi amor, quiero que sepas que quizás no soy el hombre perfecto, ni el más inteligente, ni el más fuerte, ni el que siempre hace todo bien.</p>
+    <p>Pero desde que llegaste a mi vida descubrí algo que jamás había sentido: las ganas de convertirme cada día en una mejor versión de mí mismo.</p>
+    <p>Por ti quiero aprender.<br>Por ti quiero crecer.<br>Por ti quiero mejorar.<br>Porque cuando miro tus ojos encuentro una razón para seguir adelante incluso en los días difíciles.</p>
+    <p>Tú eres mucho más que una novia para mí.<br>Eres mi tranquilidad.<br>Mi felicidad.<br>Mi refugio.<br>Mi lugar favorito.</p>
+    <p>Y aunque no pueda prometer perfección,<br>sí puedo prometer esfuerzo,<br>amor,<br>lealtad<br>y un corazón que siempre intentará darte lo mejor de sí.</p>
+    <p>Porque si existe alguien por quien vale la pena luchar para ser mejor,<br>esa persona eres tú,<br><span class="destacado">mi Angy ❤️</span>.</p>
+  </div>
 
-<p class="subtitulo">
-Mi princesita linda, mi corazoncito, mis ojitos radiantes...
-</p>
+  <h2 class="video-titulo">Nuestros Momentos ❤️</h2>
+  <div class="video-marco">
+    <video id="videoNosotros" autoplay muted loop playsinline preload="auto">
+      <source src="AFRL.mp4" type="video/mp4">
+    </video>
+  </div>
 
-<div class="foto-marco">
-<img src="AF.jpg" alt="Nuestra Foto">
+  <div id="corazon-section">
+    <h2 id="corazonTitulo">Dibuja dentro de mi corazón ❤️</h2>
+    <p id="corazonTexto">
+      Pinta, escribe o dibuja lo que sientas 🖌️<br>
+      <small style="font-size:18px;opacity:0.7;">Llena el corazón para desbloquear la sorpresa</small>
+    </p>
+
+    <div id="canvasWrapper">
+      <canvas id="heartCanvas" width="500" height="500"></canvas>
+    </div>
+
+    <!-- Barra de progreso -->
+    <div id="progresoWrap"><div id="progresoBar"></div></div>
+    <div id="progresoTexto">0% del corazón llenado</div>
+
+    <div id="mensajeMotivador"></div>
+
+    <div class="btn-grupo">
+      <button id="btnReiniciar" onclick="reiniciarCorazon()">🔄 Reiniciar</button>
+      <button id="btnCompletar" onclick="completarHistoria()">🔒 Sigue pintando...</button>
+    </div>
+  </div>
+
+  <div id="cartaSecreta"></div>
 </div>
-
-<div class="carta">
-
-<p>
-Mi amor, quiero que sepas que quizás no soy el hombre perfecto, ni el más inteligente, ni el más fuerte, ni el que siempre hace todo bien.
-</p>
-
-<p>
-Pero desde que llegaste a mi vida descubrí algo que jamás había sentido: las ganas de convertirme cada día en una mejor versión de mí mismo.
-</p>
-
-<p>
-Por ti quiero aprender.
-Por ti quiero crecer.
-Por ti quiero mejorar.
-Porque cuando miro tus ojos encuentro una razón para seguir adelante incluso en los días difíciles.
-</p>
-
-<p>
-Tú eres mucho más que una novia para mí.
-Eres mi tranquilidad.
-Mi felicidad.
-Mi refugio.
-Mi lugar favorito.
-</p>
-
-<p>
-Y aunque no pueda prometer perfección,
-sí puedo prometer esfuerzo,
-amor,
-lealtad
-y un corazón que siempre intentará darte lo mejor de sí.
-</p>
-
-<p>
-Porque si existe alguien por quien vale la pena luchar para ser mejor,
-esa persona eres tú,
-<span class="destacado">mi Angy ❤️</span>.
-</p>
-
-</div>
-
-<h2 class="video-titulo">Nuestros Momentos ❤️</h2>
-
-<div class="video-marco">
-  <video id="videoNosotros" autoplay muted loop playsinline preload="auto">
-    <source src="AFRL.mp4" type="video/mp4">
-    <source src="AFRL.mp4" type="video/mp4">
-  </video>
-</div>
-
-<div id="corazon-section">
-
-<h2 id="corazonTitulo">
-Dibuja dentro de mi corazón ❤️
-</h2>
-
-<p id="corazonTexto">
-Pinta, escribe o dibuja lo que sientas 🖌️<br>
-<small style="font-size:18px;opacity:0.7;">Si te sales del corazón puedes reiniciar</small>
-</p>
-
-<canvas id="heartCanvas" width="500" height="500"></canvas>
-
-<div id="mensajeMotivador"></div>
-
-<button id="btnReiniciar" onclick="reiniciarCorazon()">🔄 Reiniciar</button>
-
-</div>
-
-<div id="cartaSecreta"></div>
-
-</div>
-
 </div>
 
 <div id="finalOverlay">
+  <h1>TE AMO</h1>
+  <p>Angy ❤️</p>
+</div>
 
-<h1>TE AMO</h1>
-
-<p>Angy ❤️</p>
-
-</div><script>
-
-const abrirCarta = document.getElementById("abrirCarta");
-const bienvenida = document.getElementById("bienvenida");
-const contenido = document.getElementById("contenido");
-const tapa = document.getElementById("tapaSVG");
-const musica = document.getElementById("musica");
-
-abrirCarta.addEventListener("click",()=>{
-
-tapa.style.transform="rotateX(180deg)";
-
-musica.play().catch(()=>{});
-
-setTimeout(()=>{
-
-bienvenida.style.opacity="0";
-
-setTimeout(()=>{
-
-bienvenida.style.display="none";
-contenido.style.display="block";
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
+<script>
+// ── APERTURA ─────────────────────────────────────────────
+document.getElementById("abrirCarta").addEventListener("click", () => {
+  document.getElementById("tapaSVG").style.transform = "rotateX(180deg)";
+  document.getElementById("musica").play().catch(()=>{});
+  setTimeout(() => {
+    const b = document.getElementById("bienvenida");
+    b.style.opacity = "0";
+    setTimeout(() => {
+      b.style.display = "none";
+      document.getElementById("contenido").style.display = "block";
+      window.scrollTo({top:0,behavior:"smooth"});
+    }, 1000);
+  }, 1000);
 });
 
-},1000);
-
-},1000);
-
-});
-
-// ── CORAZÓN: DIBUJO LIBRE ────────────────────────────────
-const canvas = document.getElementById("heartCanvas");
-const ctx = canvas.getContext("2d");
-const mensajeMotivador = document.getElementById("mensajeMotivador");
-
+// ── CANVAS SETUP ─────────────────────────────────────────
+const canvas  = document.getElementById("heartCanvas");
+const ctx     = canvas.getContext("2d");
 const W = 500, H = 500;
-const CX = W/2, CY = H/2 + 20;
-const ESCALA = 11.5;
+const CX = W/2, CY = H/2 + 20, ESCALA = 11.5;
 
-// Generar puntos del contorno del corazón
+// Generar polígono del corazón
 const puntosCorazon = [];
-const TOTAL_PUNTOS = 400;
-for(let i = 0; i < TOTAL_PUNTOS; i++){
-  const t = (i / TOTAL_PUNTOS) * Math.PI * 2;
-  const x = 16 * Math.pow(Math.sin(t), 3);
-  const y = -(13*Math.cos(t) - 5*Math.cos(2*t) - 2*Math.cos(3*t) - Math.cos(4*t));
-  puntosCorazon.push({ x: CX + x*ESCALA, y: CY + y*ESCALA });
+for(let i = 0; i < 400; i++){
+  const t = (i/400)*Math.PI*2;
+  const x = 16*Math.pow(Math.sin(t),3);
+  const y = -(13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t));
+  puntosCorazon.push({x: CX+x*ESCALA, y: CY+y*ESCALA});
 }
 
-// Función para saber si un punto está DENTRO del corazón
-function estaAdentro(px, py){
-  // Ray casting contra el polígono del corazón
-  let dentro = false;
-  const n = puntosCorazon.length;
-  for(let i = 0, j = n-1; i < n; j = i++){
-    const xi = puntosCorazon[i].x, yi = puntosCorazon[i].y;
-    const xj = puntosCorazon[j].x, yj = puntosCorazon[j].y;
-    const intersect = ((yi > py) !== (yj > py)) &&
-      (px < (xj - xi) * (py - yi) / (yj - yi) + xi);
-    if(intersect) dentro = !dentro;
+function estaAdentro(px,py){
+  let dentro=false, n=puntosCorazon.length;
+  for(let i=0,j=n-1;i<n;j=i++){
+    const {x:xi,y:yi}=puntosCorazon[i], {x:xj,y:yj}=puntosCorazon[j];
+    if(((yi>py)!==(yj>py))&&(px<(xj-xi)*(py-yi)/(yj-yi)+xi)) dentro=!dentro;
   }
   return dentro;
 }
 
-// Dibujar el contorno del corazón (guía)
+// Precomputar máscara de píxeles dentro del corazón (cada 4px para eficiencia)
+const PASO = 4;
+let pixelesInteriores = 0;
+for(let py=0;py<H;py+=PASO)
+  for(let px=0;px<W;px+=PASO)
+    if(estaAdentro(px,py)) pixelesInteriores++;
+
 function dibujarContorno(){
   ctx.beginPath();
-  ctx.lineWidth = 5;
-  ctx.strokeStyle = "rgba(255,220,168,0.5)";
-  ctx.lineJoin = "round";
-  ctx.lineCap = "round";
-  ctx.moveTo(puntosCorazon[0].x, puntosCorazon[0].y);
-  for(let p of puntosCorazon) ctx.lineTo(p.x, p.y);
-  ctx.closePath();
-  ctx.stroke();
-  // Fill suave
-  ctx.fillStyle = "rgba(255,100,130,0.06)";
-  ctx.fill();
+  ctx.lineWidth=5; ctx.strokeStyle="rgba(255,220,168,0.5)";
+  ctx.lineJoin="round"; ctx.lineCap="round";
+  ctx.moveTo(puntosCorazon[0].x,puntosCorazon[0].y);
+  for(const p of puntosCorazon) ctx.lineTo(p.x,p.y);
+  ctx.closePath(); ctx.stroke();
+  ctx.fillStyle="rgba(255,100,130,0.06)"; ctx.fill();
 }
 
-// Clips para que el dibujo quede DENTRO del corazón
 function aplicarClip(){
   ctx.save();
   ctx.beginPath();
-  ctx.moveTo(puntosCorazon[0].x, puntosCorazon[0].y);
-  for(let p of puntosCorazon) ctx.lineTo(p.x, p.y);
-  ctx.closePath();
-  ctx.clip();
+  ctx.moveTo(puntosCorazon[0].x,puntosCorazon[0].y);
+  for(const p of puntosCorazon) ctx.lineTo(p.x,p.y);
+  ctx.closePath(); ctx.clip();
 }
 
 dibujarContorno();
 
-// Estado del dibujo
-let dibujando = false;
-let ultimoX = 0, ultimoY = 0;
-let fueraDeLínea = false;
-let pincelColor = "#ff4d80";
-let pincelGrosor = 14;
-
-const mensajes = [
-  "Eres mi lugar favorito ❤️",
-  "Tu sonrisa ilumina mis días ❤️",
-  "Mi corazoncito hermoso ❤️",
-  "Dibuja todo tu amor ❤️",
-  "Mis ojitos radiantes ❤️",
-  "Gracias por existir ❤️",
-  "Eres todo para mí ❤️",
-  "Mi princesita linda ❤️"
-];
-function mensajeRandom(){
-  mensajeMotivador.textContent = mensajes[Math.floor(Math.random()*mensajes.length)];
-}
-setInterval(mensajeRandom, 3500);
-mensajeRandom();
-
+// ── COORDENADAS CORRECTAS ────────────────────────────────
 function obtenerPos(e){
-  const rect = canvas.getBoundingClientRect();
-  const scaleX = W / rect.width;
-  const scaleY = H / rect.height;
-  if(e.touches){
-    return {
-      x: (e.touches[0].clientX - rect.left) * scaleX,
-      y: (e.touches[0].clientY - rect.top)  * scaleY
-    };
-  }
-  return {
-    x: (e.clientX - rect.left) * scaleX,
-    y: (e.clientY - rect.top)  * scaleY
-  };
+  const rect=canvas.getBoundingClientRect();
+  const sx=W/rect.width, sy=H/rect.height;
+  if(e.touches) return {x:(e.touches[0].clientX-rect.left)*sx, y:(e.touches[0].clientY-rect.top)*sy};
+  return {x:(e.clientX-rect.left)*sx, y:(e.clientY-rect.top)*sy};
 }
 
+let dibujando=false, ultimoX=0, ultimoY=0;
+
+const mensajes=[
+  "Eres mi lugar favorito ❤️","Tu sonrisa ilumina mis días ❤️","Mi corazoncito hermoso ❤️",
+  "Dibuja todo tu amor ❤️","Mis ojitos radiantes ❤️","Gracias por existir ❤️",
+  "Eres todo para mí ❤️","Mi princesita linda ❤️"
+];
+const mensajeEl=document.getElementById("mensajeMotivador");
+function mensajeRandom(){ mensajeEl.textContent=mensajes[Math.floor(Math.random()*mensajes.length)]; }
+setInterval(mensajeRandom,3500); mensajeRandom();
+
+// ── PROGRESO: medir píxeles pintados dentro del corazón ──
+const UMBRAL = 60; // % mínimo para desbloquear
+let desbloqueado = false;
+
+function medirProgreso(){
+  // Leer píxeles del canvas con muestreo
+  let pintados=0;
+  const idata=ctx.getImageData(0,0,W,H).data;
+  for(let py=0;py<H;py+=PASO){
+    for(let px=0;px<W;px+=PASO){
+      if(!estaAdentro(px,py)) continue;
+      const idx=(py*W+px)*4;
+      // Pixel pintado si alpha>30 y no es solo el fondo semi-transparente (rosa muy tenue)
+      const a=idata[idx+3], r=idata[idx], g=idata[idx+1], b=idata[idx+2];
+      // El contorno base tiene alpha muy bajo; el trazo del usuario es más brillante
+      if(a>60 && !(r>180&&g<80&&b<100&&a<40)) pintados++;
+    }
+  }
+  const pct=Math.min(100,Math.round((pintados/pixelesInteriores)*100));
+  document.getElementById("progresoBar").style.width=pct+"%";
+  document.getElementById("progresoTexto").textContent=pct+"% del corazón llenado";
+
+  if(pct>=UMBRAL && !desbloqueado){
+    desbloqueado=true;
+    const btn=document.getElementById("btnCompletar");
+    btn.classList.add("desbloqueado");
+    btn.textContent="¡Listo! ❤️";
+    mensajeEl.textContent="¡Corazón lleno! Toca el botón 💖";
+  }
+  return pct;
+}
+
+// Medir cada vez que el usuario levanta el dedo/mouse
 function iniciarTrazo(e){
   e.preventDefault();
-  const pos = obtenerPos(e);
-  // Solo permite iniciar si está dentro del corazón
-  if(!estaAdentro(pos.x, pos.y)){
-    canvas.style.boxShadow = "0 0 25px rgba(255,50,50,0.7)";
-    mensajeMotivador.textContent = "¡Empieza dentro del corazón! 💕";
+  const pos=obtenerPos(e);
+  if(!estaAdentro(pos.x,pos.y)){
+    canvas.style.boxShadow="0 0 25px rgba(255,50,50,0.7)";
+    mensajeEl.textContent="¡Empieza dentro del corazón! 💕";
     return;
   }
-  dibujando = true;
-  ultimoX = pos.x;
-  ultimoY = pos.y;
-  canvas.style.boxShadow = "0 0 20px rgba(255,100,150,0.4)";
+  dibujando=true; ultimoX=pos.x; ultimoY=pos.y;
+  canvas.style.boxShadow="0 0 20px rgba(255,100,150,0.4)";
 }
 
 function trazar(e){
   e.preventDefault();
   if(!dibujando) return;
-  const pos = obtenerPos(e);
-
-  // Si se sale del corazón, detener el trazo
-  if(!estaAdentro(pos.x, pos.y)){
-    dibujando = false;
-    canvas.style.boxShadow = "0 0 25px rgba(255,50,50,0.7)";
-    mensajeMotivador.textContent = "¡Te saliste! Usa el botón para reiniciar 🔄";
+  const pos=obtenerPos(e);
+  if(!estaAdentro(pos.x,pos.y)){
+    dibujando=false;
+    canvas.style.boxShadow="0 0 25px rgba(255,50,50,0.7)";
+    mensajeEl.textContent="¡Te saliste! Sigue dentro del corazón 💕";
     return;
   }
-
-  canvas.style.boxShadow = "0 0 20px rgba(255,100,150,0.4)";
-
-  // Dibujar línea suave con clip al corazón
+  canvas.style.boxShadow="0 0 20px rgba(255,100,150,0.4)";
   aplicarClip();
-  ctx.lineWidth = pincelGrosor;
-  ctx.lineCap = "round";
-  ctx.lineJoin = "round";
-  ctx.strokeStyle = pincelColor;
-  ctx.shadowColor = pincelColor;
-  ctx.shadowBlur = 6;
-  ctx.beginPath();
-  ctx.moveTo(ultimoX, ultimoY);
-  ctx.lineTo(pos.x, pos.y);
-  ctx.stroke();
+  ctx.lineWidth=14; ctx.lineCap="round"; ctx.lineJoin="round";
+  ctx.strokeStyle="#ff4d80"; ctx.shadowColor="#ff4d80"; ctx.shadowBlur=6;
+  ctx.beginPath(); ctx.moveTo(ultimoX,ultimoY); ctx.lineTo(pos.x,pos.y); ctx.stroke();
   ctx.restore();
-
-  ultimoX = pos.x;
-  ultimoY = pos.y;
+  ultimoX=pos.x; ultimoY=pos.y;
 }
 
 function terminarTrazo(){
-  dibujando = false;
+  if(dibujando) medirProgreso();
+  dibujando=false;
 }
 
 canvas.addEventListener("mousedown",  iniciarTrazo);
 canvas.addEventListener("mousemove",  trazar);
 canvas.addEventListener("mouseup",    terminarTrazo);
 canvas.addEventListener("mouseleave", terminarTrazo);
-canvas.addEventListener("touchstart", iniciarTrazo, {passive:false});
-canvas.addEventListener("touchmove",  trazar,       {passive:false});
+canvas.addEventListener("touchstart", iniciarTrazo,{passive:false});
+canvas.addEventListener("touchmove",  trazar,{passive:false});
 canvas.addEventListener("touchend",   terminarTrazo);
 
 function reiniciarCorazon(){
-  ctx.clearRect(0, 0, W, H);
-  dibujarContorno();
-  canvas.style.boxShadow = "";
-  mensajeMotivador.textContent = "Empieza de nuevo mi amor ❤️";
+  ctx.clearRect(0,0,W,H); dibujarContorno();
+  canvas.style.boxShadow=""; desbloqueado=false;
+  document.getElementById("progresoBar").style.width="0%";
+  document.getElementById("progresoTexto").textContent="0% del corazón llenado";
+  const btn=document.getElementById("btnCompletar");
+  btn.classList.remove("desbloqueado");
+  btn.textContent="🔒 Sigue pintando...";
+  mensajeEl.textContent="Empieza de nuevo mi amor ❤️";
 }
 
+// ── EXPLOSIÓN FINAL ──────────────────────────────────────
+let terminado=false;
+
 function completarHistoria(){
-
-if(terminado)return;
-
-terminado=true;
-
-// corazón completado
-
-explosionGigante();
-
-setTimeout(()=>{
-
-document.getElementById(
-"finalOverlay"
-).style.display="flex";
-
-},1200);
-
-setTimeout(()=>{
-
-mostrarCartaSecreta();
-
-},3000);
-
+  if(terminado||!desbloqueado) return;
+  terminado=true;
+  document.getElementById("btnCompletar").style.display="none";
+  explosionGigante();
+  setTimeout(()=>{ document.getElementById("finalOverlay").style.display="flex"; },1200);
+  setTimeout(()=>{ document.getElementById("finalOverlay").style.display="none"; mostrarCartaSecreta(); },4500);
 }
 
 function explosionGigante(){
-
-for(let i=0;i<500;i++){
-
-const heart=
-document.createElement("div");
-
-heart.className=
-"heart-particle";
-
-heart.innerHTML=
-Math.random()>0.5
-?"❤️":"💖";
-
-heart.style.left=
-window.innerWidth/2+"px";
-
-heart.style.top=
-window.innerHeight/2+"px";
-
-heart.style.fontSize=
-(15+Math.random()*45)+"px";
-
-document.body.appendChild(
-heart
-);
-
-const angle=
-Math.random()*360;
-
-const distance=
-200+Math.random()*900;
-
-heart.animate([
-
-{
-transform:
-"translate(0,0) scale(0)",
-opacity:1
-},
-
-{
-transform:
-`translate(
-${Math.cos(angle*Math.PI/180)*distance}px,
-${Math.sin(angle*Math.PI/180)*distance}px
-) scale(1.5)`,
-
-opacity:0
-}
-
-],{
-
-duration:
-2500+Math.random()*2000,
-
-easing:"cubic-bezier(.17,.67,.2,1)"
-
-});
-
-setTimeout(()=>{
-
-heart.remove();
-
-},5000);
-
-}
-
-lluviaCorazones();
-
+  for(let i=0;i<500;i++){
+    const h=document.createElement("div"); h.className="heart-particle";
+    h.innerHTML=Math.random()>.5?"❤️":"💖";
+    h.style.left=window.innerWidth/2+"px"; h.style.top=window.innerHeight/2+"px";
+    h.style.fontSize=(15+Math.random()*45)+"px"; document.body.appendChild(h);
+    const ang=Math.random()*360, dist=200+Math.random()*900;
+    h.animate([
+      {transform:"translate(0,0) scale(0)",opacity:1},
+      {transform:`translate(${Math.cos(ang*Math.PI/180)*dist}px,${Math.sin(ang*Math.PI/180)*dist}px) scale(1.5)`,opacity:0}
+    ],{duration:2500+Math.random()*2000,easing:"cubic-bezier(.17,.67,.2,1)"});
+    setTimeout(()=>h.remove(),5000);
+  }
+  lluviaCorazones();
 }
 
 function lluviaCorazones(){
-
-for(let i=0;i<350;i++){
-
-setTimeout(()=>{
-
-const h=
-document.createElement("div");
-
-h.className=
-"heart-particle";
-
-h.innerHTML=
-["❤️","💖","💕","💘"][
-Math.floor(Math.random()*4)
-];
-
-h.style.left=
-Math.random()*100+"vw";
-
-h.style.top="-50px";
-
-h.style.fontSize=
-(20+Math.random()*45)+"px";
-
-document.body.appendChild(h);
-
-h.animate([
-
-{
-transform:
-"translateY(0px)",
-opacity:1
-},
-
-{
-transform:
-"translateY(120vh)",
-opacity:0
-}
-
-],{
-
-duration:
-4000+Math.random()*5000,
-
-easing:"linear"
-
-});
-
-setTimeout(()=>{
-
-h.remove();
-
-},10000);
-
-},i*40);
-
-}
-
+  for(let i=0;i<350;i++){
+    setTimeout(()=>{
+      const h=document.createElement("div"); h.className="heart-particle";
+      h.innerHTML=["❤️","💖","💕","💘"][Math.floor(Math.random()*4)];
+      h.style.left=Math.random()*100+"vw"; h.style.top="-50px";
+      h.style.fontSize=(20+Math.random()*45)+"px"; document.body.appendChild(h);
+      h.animate([{transform:"translateY(0px)",opacity:1},{transform:"translateY(120vh)",opacity:0}],
+        {duration:4000+Math.random()*5000,easing:"linear"});
+      setTimeout(()=>h.remove(),10000);
+    },i*40);
+  }
 }
 
 function mostrarCartaSecreta(){
-
-const carta =
-document.getElementById(
-"cartaSecreta"
-);
-
-carta.style.display="block";
-
-carta.innerHTML=`
-
-<h2 style="
-font-family:'Great Vibes';
-font-size:70px;
-text-align:center;
-color:#ffdca8;
-margin-bottom:30px;
-">
-Carta Secreta ❤️
-</h2>
-
-<p>
-Si llegaste hasta aquí,
-significa que completaste este corazón,
-igual que tú completas el mío todos los días.
-</p>
-
-<p>
-No soy perfecto.
-Cometo errores.
-Tengo defectos.
-Y probablemente me equivocaré muchas veces.
-</p>
-
-<p>
-Pero hay algo que jamás cambiará:
-las ganas que tengo de seguir mejorando por ti.
-</p>
-
-<p>
-Porque desde que llegaste,
-mi mundo se volvió más bonito.
-Mis días más felices.
-Y mis sueños mucho más grandes.
-</p>
-
-<p>
-Gracias por cada sonrisa.
-Gracias por cada abrazo.
-Gracias por cada momento.
-</p>
-
-<p>
-Gracias por ser mi princesita linda,
-mi corazoncito,
-mis ojitos radiantes.
-</p>
-
-<p>
-Quiero seguir creando recuerdos contigo,
-seguir tomándote de la mano,
-seguir viendo tu sonrisa,
-seguir eligiéndote todos los días.
-</p>
-
-<p>
-Y si algún día dudas cuánto te amo,
-vuelve a esta carta,
-porque aquí quedará escrito para siempre:
-</p>
-
-<h2 style="
-text-align:center;
-font-size:65px;
-color:#ffdca8;
-font-family:'Great Vibes';
-margin-top:40px;
-">
-Te Amo Infinitamente ❤️
-</h2>
-
-`;
-
-carta.scrollIntoView({
-behavior:"smooth"
-});
-
+  const carta=document.getElementById("cartaSecreta");
+  carta.style.display="block";
+  carta.innerHTML=`
+    <h2 style="font-family:'Great Vibes';font-size:70px;text-align:center;color:#ffdca8;margin-bottom:30px;">Carta Secreta ❤️</h2>
+    <p>Si llegaste hasta aquí, significa que completaste este corazón, igual que tú completas el mío todos los días.</p>
+    <p>No soy perfecto. Cometo errores. Tengo defectos. Y probablemente me equivocaré muchas veces.</p>
+    <p>Pero hay algo que jamás cambiará: las ganas que tengo de seguir mejorando por ti.</p>
+    <p>Porque desde que llegaste, mi mundo se volvió más bonito. Mis días más felices. Y mis sueños mucho más grandes.</p>
+    <p>Gracias por cada sonrisa. Gracias por cada abrazo. Gracias por cada momento.</p>
+    <p>Gracias por ser mi princesita linda, mi corazoncito, mis ojitos radiantes.</p>
+    <p>Quiero seguir creando recuerdos contigo, seguir tomándote de la mano, seguir viendo tu sonrisa, seguir eligiéndote todos los días.</p>
+    <p>Y si algún día dudas cuánto te amo, vuelve a esta carta, porque aquí quedará escrito para siempre:</p>
+    <h2 style="text-align:center;font-size:65px;color:#ffdca8;font-family:'Great Vibes';margin-top:40px;">Te Amo Infinitamente ❤️</h2>
+  `;
+  carta.scrollIntoView({behavior:"smooth"});
 }
-
 </script>
-
 </body>
 </html>
