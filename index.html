@@ -280,10 +280,8 @@ color:#ffdca8;
 
 #heartCanvas{
 
-width:500px;
-height:500px;
-
-max-width:90vw;
+width:min(480px, 92vw);
+height:min(480px, 92vw);
 
 background:rgba(255,255,255,.04);
 
@@ -292,6 +290,12 @@ border-radius:25px;
 border:1px solid rgba(255,255,255,.1);
 
 cursor:crosshair;
+
+touch-action:none;
+}
+
+#corazon-section{
+  padding: 0 10px;
 }
 
 #mensajeMotivador{
@@ -374,6 +378,19 @@ z-index:999999;
 audio{
 display:none;
 }
+@media(max-width: 600px){
+  .titulo{ font-size: 58px; }
+  .subtitulo{ font-size: 20px; }
+  .carta{ font-size: 22px; }
+  #corazonTitulo{ font-size: 48px; }
+  #corazonTexto{ font-size: 18px; }
+  #mensajeMotivador{ font-size: 18px; }
+  .foto-marco{ width: 90vw; height: auto; aspect-ratio: 3/4; }
+  .video-titulo{ font-size: 38px; }
+  .hero{ padding: 25px 15px; }
+  #btnReiniciar{ font-size: 18px; padding: 12px 30px; }
+}
+
 
 #btnReiniciar{
   margin-top:25px;
@@ -631,8 +648,8 @@ function estaAdentro(px, py){
 // Dibujar el contorno del corazón (guía)
 function dibujarContorno(){
   ctx.beginPath();
-  ctx.lineWidth = 3;
-  ctx.strokeStyle = "rgba(255,220,168,0.35)";
+  ctx.lineWidth = 5;
+  ctx.strokeStyle = "rgba(255,220,168,0.5)";
   ctx.lineJoin = "round";
   ctx.lineCap = "round";
   ctx.moveTo(puntosCorazon[0].x, puntosCorazon[0].y);
@@ -661,7 +678,7 @@ let dibujando = false;
 let ultimoX = 0, ultimoY = 0;
 let fueraDeLínea = false;
 let pincelColor = "#ff4d80";
-let pincelGrosor = 8;
+let pincelGrosor = 14;
 
 const mensajes = [
   "Eres mi lugar favorito ❤️",
